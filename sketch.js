@@ -28,7 +28,7 @@ function setup() {
 	bobObject4=new bob(600,600)
 	bobObject5=new bob(500,600)
 
-chain1=new Rope(bobObject1.body,ground.body,bobDiameter*2,0)
+//chain1=new Rope(bobObject1.body,ground.body,bobDiameter*2,0)
 
 	Engine.run(engine);
   
@@ -48,7 +48,7 @@ function draw() {
   bobObject4.display();
   bobObject5.display();
 
-  chain1.display();
+  //chain1.display();
 }
 
 
