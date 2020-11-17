@@ -1,20 +1,19 @@
 class bob{
-    constructor(x,y){
+    constructor(x,y,radius){
       var ball_options={
-        isStatic:true,
-        restitution:0.3,
-        friction:0.5,
+        isStatic:false,
+        restitution:1.0,
         density:1.2
      }
-         this.image=loadImage("paper.png");
-         this.body= Matter.Bodies.circle(x,y,80,ball_options);
-         World.add(world,this.body)  
+         this.body= Bodies.circle(x,y,radius,ball_options);
+         World.add(world,this.body)
+         this.radius=radius;  
    }
       display(){
         var pos=this.body.position;
-        fill("white")   
-       ellipseMode(CENTER)
-        ellipse(pos.x,pos.y,80,80)
+        fill("magenta")   
+       ellipseMode(RADIUS)
+        ellipse(pos.x,pos.y,this.radius,this.radius)
       }
               
   }
