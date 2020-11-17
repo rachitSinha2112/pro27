@@ -5,16 +5,16 @@ this.offsetY=offsetY
 var options={
 bodyA:body1,
 bodyB:body2,
-pointB:{x:this.offsetX,y:offsetY}
+pointB:{x:this.offsetX,y:this.offsetY}
 }
 this.rope=Constraint.create(options)
 World.add(world,this.rope)
 }
 display(){
-    var posA=this.chain.bodyA.position
-    var posB=this.chain.bodyB.position
+    var posA=this.rope.bodyA.position
+    var posB=this.rope.bodyB.position
     
-    line(posA.x,posA.y,posB.x,posB.y)
+    line(posA.x,posA.y,posB.x+this.offsetX,posB.y+this.offsetY)
     }
     
 }
